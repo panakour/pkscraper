@@ -1,0 +1,35 @@
+{
+  "name": "panakour/pkscraper",
+  "description": "Get whatever data you want.",
+  "keywords": ["scraper"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Panagiots Koursaris",
+      "email": "panakourweb@gmail.com"
+    }
+  ],
+  "require": {
+    "ext-dom": "*",
+    "ext-libxml": "*",
+    "ext-json": "*",
+    "php": "^7.1",
+    "guzzlehttp/guzzle": "~6.0",
+    "ezyang/htmlpurifier": "^4.10",
+    "symfony/dom-crawler": "^4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~8.0",
+    "symfony/var-dumper": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pkscraper\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Pkscraper\\Tests\\": "tests/"
+    }
+  }
+}
