@@ -28,8 +28,10 @@ class ElementByClassByIndexRemover extends Remover
     {
         $dom = new Dom($this->document);
         $xpath = new DOMXPath($dom->DOMDocument);
-        $elementsToBeRemove = $xpath->query('//*[contains(concat(" ", normalize-space(@class), " "), " ' . $this->class . ' ")]');
-        $elementsToBeRemove->item($this->index)->parentNode->removeChild($elementsToBeRemove->item($this->index));
+        $elementToBeRemove = $xpath->query('//*[contains(concat(" ", normalize-space(@class), " "), " ' . $this->class . ' ")]')->item($this->index);
+        if ($elementToBeRemove !== null) {
+            $elementToBeRemove->parentNode->removeChild($elementToBeRemove);
+        }
         return $dom->get();
     }
 }
