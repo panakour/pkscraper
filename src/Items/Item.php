@@ -23,6 +23,8 @@ abstract class Item
 
     protected $originalExtractedValue;
 
+    protected $required = true;
+
     /**
      * @var Cleaner[]
      */
@@ -184,7 +186,7 @@ abstract class Item
     public function build()
     {
         $this->doExtract();
-        if (empty($this->extractedValue)) {
+        if (empty($this->extractedValue) && $this->isRequired()) {
             throw new EmptyItemException("code:" . $this->code . " selector:" . $this->selector);
         }
         $this->doClone();
@@ -195,4 +197,20 @@ abstract class Item
     }
 
     abstract protected function doExtract();
+
+    /**
+     * @return bool
+     */
+    public function isRequired(): bool
+    {
+        return $this->required;
+    }
+
+    /**
+     * @param bool $required
+     */
+    public function setRequired(bool $required): void
+    {
+        $this->required = $required;
+    }
 }
