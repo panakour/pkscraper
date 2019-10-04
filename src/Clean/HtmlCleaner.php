@@ -90,7 +90,7 @@ class HtmlCleaner extends Cleaner
     protected function purify(): void
     {
         $purifierConfig = HTMLPurifier_Config::createDefault();
-        $this->enableIframeForYoutubeAndVimeo($purifierConfig);
+        $this->enableIframeForYoutubeVimeoFacebook($purifierConfig);
         $purifierConfig->set('HTML.AllowedElements', $this->allowedElements);
         if (in_array('a', $this->allowedElements)) {
             $this->allowedAttributes = array_merge($this->allowedAttributes, ['a.href', 'a.target', 'a.rel']);
@@ -127,13 +127,13 @@ class HtmlCleaner extends Cleaner
         }
     }
 
-    protected function enableIframeForYoutubeAndVimeo($purifierConfig)
+    protected function enableIframeForYoutubeVimeoFacebook($purifierConfig)
     {
         if ($this->dom->getNodeList('iframe')->length) {
             array_push($this->allowedElements, 'iframe');
             array_push($this->allowedAttributes, 'iframe.src');
             $purifierConfig->set('HTML.SafeIframe', true);
-            $purifierConfig->set('URI.SafeIframeRegexp', '%^(https?:)?//(www\.youtube(?:-nocookie)?\.com/embed/|player\.vimeo\.com/video/)%');
+            $purifierConfig->set('URI.SafeIframeRegexp', '%^(https?:)?//(www\.youtube(?:-nocookie)?\.com/embed/|player\.vimeo\.com/video/|www\.facebook\.com/plugins/video.php\?)%');
         }
     }
 
