@@ -118,7 +118,7 @@ class HtmlCleaner extends Cleaner
                 if ($links->item($i)->nodeValue !== "") {
                     $span = $this->dom->DOMDocument->createElement('span', $links->item($i)->nodeValue);
                     $this->dom->replaceElement($links->item($i), $span);
-                } else {
+                } elseif ($links->item($i)->getElementsByTagName('img')->length !== 0) {
                     //in case of none nodeValue expect that image exist on child element
                     $this->dom->replaceElement($links->item($i), $links->item($i)->getElementsByTagName('img')[0]);
                 }
