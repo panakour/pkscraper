@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/panakour/pkscraper.svg?branch=master)](https://travis-ci.org/panakour/pkscraper)
+[![codecov](https://codecov.io/gh/panakour/pkscraper/branch/master/graph/badge.svg)](https://codecov.io/gh/panakour/pkscraper)
 
  ## Installation
  `composer require panakour/pkscraper`
