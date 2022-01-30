@@ -13,7 +13,7 @@
     "ext-dom": "*",
     "ext-libxml": "*",
     "ext-json": "*",
-    "php": "^7.2",
+    "php": "^7.2|^8.0",
     "guzzlehttp/guzzle": "~6.0",
     "ezyang/htmlpurifier": "^4.10",
     "symfony/dom-crawler": "^4.0"
