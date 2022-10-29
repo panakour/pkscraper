@@ -2,16 +2,19 @@
 <phpunit backupGlobals="false"
          backupStaticAttributes="false"
          bootstrap="vendor/autoload.php"
-         colors="true"
->
+         colors="true">
     <testsuites>
-        <testsuite name="Pkscraper Test Suite">
-            <directory suffix="Test.php">./tests</directory>
+        <testsuite name="default">
+            <directory suffix="Test.php">tests</directory>
         </testsuite>
     </testsuites>
-    <filter>
-        <whitelist>
-            <directory suffix=".php">./src</directory>
-        </whitelist>
-    </filter>
+
+    <coverage cacheDirectory=".phpunit.cache/code-coverage" processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+        <report>
+            <clover outputFile="clover.xml"/>
+        </report>
+    </coverage>
 </phpunit>

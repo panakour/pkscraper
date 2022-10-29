@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 use Pkscraper\Exceptions\ElementNotFoundException;
 use Pkscraper\Remove\ElementByIdRemover;
 
-class ElementsByIdRemoverTest extends TestCase
+class ElementByIdRemoverTest extends TestCase
 {
 
     public function testRemove()

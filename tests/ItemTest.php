@@ -85,7 +85,7 @@ class ItemTest extends TestCase
     {
         $itemMock = $this->getMockBuilder(Item::class)->disableOriginalConstructor()->setMethods(['doExtract'])->getMock();
         $this->expectException(EmptyItemException::class);
-        $itemMock->expects($this->at(0))->method('doExtract')->with();
+        $itemMock->expects($this->once())->method('doExtract')->with();
         $itemMock->build();
     }
 
