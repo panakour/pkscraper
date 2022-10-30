@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1667138542">
-  <project timestamp="1667138542">
+<coverage generated="1667138995">
+  <project timestamp="1667138995">
     <file name="/home/runner/work/pkscraper/pkscraper/src/Bag.php">
       <class name="Pkscraper\Bag" namespace="global">
         <metrics complexity="11" methods="8" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="8" elements="19" coveredelements="14"/>
