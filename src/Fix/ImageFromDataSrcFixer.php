@@ -9,7 +9,7 @@
 namespace Pkscraper\Fix;
 
 
-use Pkscraper\Dom\Dom;
+use Panakour\DOM\Dom;
 
 class ImageFromDataSrcFixer extends Fixer
 {

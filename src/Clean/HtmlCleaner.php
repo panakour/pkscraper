@@ -5,7 +5,7 @@ namespace Pkscraper\Clean;
 use Closure;
 use HTMLPurifier;
 use HTMLPurifier_Config;
-use Pkscraper\Dom\Dom;
+use Panakour\DOM\Dom;
 use Pkscraper\ToolBox;
 
 class HtmlCleaner extends Cleaner

@@ -5,7 +5,7 @@ namespace Pkscraper\Remove;
 
 
 use DOMXPath;
-use Pkscraper\Dom\Dom;
+use Panakour\DOM\Dom;
 
 class ElementsContainsClassRemover extends Remover
 {

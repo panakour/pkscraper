@@ -4,6 +4,7 @@
 namespace Pkscraper\Tests;
 
 
+use Panakour\DOM\EmptyDocumentException;
 use PHPUnit\Framework\TestCase;
 use Pkscraper\Clean\HtmlCleaner;
 
@@ -50,7 +51,7 @@ class HtmlCleanerTest extends TestCase
 
     public function testThrowExceptionWithEmptyDocument()
     {
-        $this->expectException("\Pkscraper\Exceptions\EmptyDocument");
+        $this->expectException(EmptyDocumentException::class);
         $this->htmlCleaner->setDocument('');
         $this->htmlCleaner->clean();
     }

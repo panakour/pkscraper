@@ -3,8 +3,8 @@
 namespace Pkscraper\Tests;
 
 use InvalidArgumentException;
+use Panakour\DOM\Dom;
 use PHPUnit\Framework\TestCase;
-use Pkscraper\Dom\Dom;
 
 class DomTest extends TestCase
 {

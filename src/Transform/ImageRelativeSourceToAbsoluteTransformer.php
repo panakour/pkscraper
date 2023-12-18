@@ -4,7 +4,7 @@
 namespace Pkscraper\Transform;
 
 
-use Pkscraper\Dom\Dom;
+use Panakour\DOM\Dom;
 
 class ImageRelativeSourceToAbsoluteTransformer extends Transformer
 {

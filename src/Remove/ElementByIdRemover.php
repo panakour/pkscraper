@@ -4,7 +4,7 @@
 namespace Pkscraper\Remove;
 
 
-use Pkscraper\Dom\Dom;
+use Panakour\DOM\Dom;
 use Pkscraper\Exceptions\ElementNotFoundException;
 
 class ElementByIdRemover extends Remover

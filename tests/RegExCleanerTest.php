@@ -6,7 +6,7 @@ namespace Pkscraper\Tests;
 
 use PHPUnit\Framework\TestCase;
 use Pkscraper\Clean\RegExCleaner;
-use Pkscraper\Dom\Dom;
+use Panakour\DOM\Dom;
 
 class RegExCleanerTest extends TestCase
 {

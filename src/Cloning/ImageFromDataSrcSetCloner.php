@@ -2,7 +2,7 @@
 
 namespace Pkscraper\Cloning;
 
-use Pkscraper\Dom\Dom;
+use Panakour\DOM\Dom;
 
 class ImageFromDataSrcSetCloner extends Cloner
 {
