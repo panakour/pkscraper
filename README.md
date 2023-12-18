@@ -1,5 +1,5 @@
 [![ci](https://github.com/panakour/pkscraper/actions/workflows/ci.yml/badge.svg)](https://github.com/panakour/pkscraper/actions/workflows/ci.yml)
-![Code Coverage Badge](./coverage-badge.svg)
+![Code Coverage Badge](https://raw.githubusercontent.com/panakour/pkscraper/image-data/coverage.svg)
 
  ## Installation
  `composer require panakour/pkscraper`
